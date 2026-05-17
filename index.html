@@ -5,144 +5,233 @@
 <title>Евгений Валентюк — Senior System Analyst / Solution Architect</title>
 <style>
 :root {
-  --bg: #ffffff;
-  --fg: #1a1a1a;
-  --muted: #555;
-  --accent: #4b5db5;
-  --accent-soft: #eef0fb;
-  --border: #e0e3ee;
-  --code-bg: #f5f6f9;
+  --bg: #f4f5f7;
+  --paper: #ffffff;
+  --fg: #1f2330;
+  --muted: #5a6275;
+  --accent: #3a4a8f;
+  --accent-soft: #e8ecf8;
+  --accent-line: #c9d1ea;
+  --sidebar-bg: #2a3556;
+  --sidebar-fg: #e9ecf5;
+  --sidebar-muted: #aab3cc;
+  --sidebar-accent: #ffd166;
+  --border: #e1e4ec;
+  --tag-bg: #e8ecf8;
+  --tag-fg: #3a4a8f;
 }
 * { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.55;
+  line-height: 1.5;
   color: var(--fg);
   background: var(--bg);
+  font-size: 14.5px;
 }
-.wrap {
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 36px 32px 64px;
+.sheet {
+  max-width: 1100px;
+  margin: 24px auto;
+  background: var(--paper);
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  box-shadow: 0 4px 20px rgba(20, 30, 60, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
 }
-header {
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 18px;
-  margin-bottom: 28px;
+/* Sidebar */
+.sidebar {
+  background: var(--sidebar-bg);
+  color: var(--sidebar-fg);
+  padding: 32px 26px;
 }
-h1 {
-  margin: 0 0 6px;
-  font-size: 30px;
-  letter-spacing: -0.5px;
+.sidebar h2 {
+  color: var(--sidebar-accent);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  margin: 24px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 209, 102, 0.35);
 }
-.role {
-  font-size: 17px;
+.sidebar h2:first-child { margin-top: 0; }
+.sidebar p, .sidebar li { font-size: 13.5px; line-height: 1.55; }
+.sidebar ul { margin: 6px 0; padding-left: 16px; }
+.sidebar li { margin-bottom: 4px; color: var(--sidebar-fg); }
+.sidebar a { color: var(--sidebar-fg); text-decoration: none; border-bottom: 1px dotted var(--sidebar-muted); }
+.sidebar a:hover { color: var(--sidebar-accent); border-bottom-color: var(--sidebar-accent); }
+.sidebar .muted { color: var(--sidebar-muted); font-size: 12.5px; }
+.contact-line {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  margin: 4px 0;
+  font-size: 13.5px;
+}
+.contact-line .lbl {
+  color: var(--sidebar-muted);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  min-width: 54px;
+}
+/* Main */
+.main {
+  padding: 36px 38px 40px;
+}
+.headline {
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 16px;
+  margin-bottom: 22px;
+}
+.headline h1 {
+  margin: 0 0 4px;
+  font-size: 28px;
+  letter-spacing: -0.3px;
+}
+.headline .role {
   color: var(--accent);
   font-weight: 600;
+  font-size: 16px;
   margin: 0 0 4px;
 }
-.tagline {
+.headline .tagline {
   color: var(--muted);
-  margin: 0 0 14px;
-}
-.contacts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 18px;
+  margin: 0;
   font-size: 14px;
-  color: var(--muted);
 }
-.contacts a { color: var(--accent); text-decoration: none; }
-.contacts a:hover { text-decoration: underline; }
-h2 {
-  font-size: 19px;
+.main h2 {
   color: var(--accent);
-  margin: 28px 0 10px;
+  font-size: 17px;
+  margin: 26px 0 10px;
   padding-bottom: 4px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--accent-line);
+  letter-spacing: 0.2px;
 }
-h3 {
-  font-size: 15px;
-  margin: 16px 0 6px;
-  color: var(--fg);
-}
-h4 {
+.main h3 {
   font-size: 14px;
   margin: 14px 0 6px;
-  color: var(--muted);
+  color: var(--fg);
   font-weight: 600;
 }
-p { margin: 0 0 10px; }
-ul { margin: 6px 0 12px; padding-left: 22px; }
-li { margin-bottom: 4px; }
-strong { color: var(--fg); }
+.main p { margin: 0 0 10px; }
+.main ul { margin: 6px 0 12px; padding-left: 20px; }
+.main li { margin-bottom: 4px; }
+.main strong { color: var(--fg); }
 .callout {
   background: var(--accent-soft);
   border-left: 3px solid var(--accent);
   padding: 12px 16px;
-  margin: 12px 0 18px;
+  margin: 12px 0 16px;
   border-radius: 4px;
-  font-size: 14.5px;
+  font-size: 14px;
 }
 .callout p:last-child { margin-bottom: 0; }
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin: 8px 0 14px;
+  margin: 6px 0 14px;
 }
 .tag {
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: var(--tag-bg);
+  color: var(--tag-fg);
   padding: 3px 10px;
-  font-size: 12.5px;
-  border-radius: 12px;
+  font-size: 12px;
+  border-radius: 11px;
   font-weight: 500;
 }
-.stack-grid {
+/* Two-column project types */
+.project-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 8px;
-  margin: 6px 0 12px;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+  margin: 8px 0 8px;
 }
-.stack-grid > div {
-  padding: 10px 14px;
-  background: var(--code-bg);
-  border-radius: 6px;
-  font-size: 14px;
-}
-.stack-grid b { color: var(--accent); }
-.project-types h3 {
-  background: var(--code-bg);
-  padding: 8px 14px;
-  border-radius: 6px;
-  margin: 6px 0;
+.project-grid .ptype {
+  background: var(--accent-soft);
   border-left: 3px solid var(--accent);
+  padding: 8px 12px;
+  border-radius: 3px;
+  font-size: 13.5px;
+  font-weight: 500;
+}
+/* Tasks types */
+.task-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+  margin: 8px 0 8px;
+}
+.task-grid .ttype {
+  background: #f1f3f9;
+  padding: 8px 12px;
+  border-radius: 3px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--fg);
 }
 @media print {
-  body { font-size: 11pt; }
-  .wrap { padding: 0; max-width: 100%; }
-  header { page-break-after: avoid; }
-  h2, h3 { page-break-after: avoid; }
+  body { background: #fff; font-size: 11pt; }
+  .sheet { box-shadow: none; margin: 0; max-width: 100%; border-radius: 0; }
+  h2 { page-break-after: avoid; }
+}
+@media (max-width: 760px) {
+  .sheet { grid-template-columns: 1fr; }
+  .main { padding: 24px 22px; }
 }
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="sheet">
 
-<header>
-<h1>Евгений Валентюк</h1>
-<p class="role">Senior System Analyst / Solution Architect</p>
-<p class="tagline">Full-stack аналитик с архитектурным уклоном и AI-ориентированным подходом</p>
-<div class="contacts">
-  <span>Екатеринбург (UTC+5, работаю по МСК)</span>
-  <span>+7 (902) 501-40-47</span>
-  <a href="mailto:e.valentyuk@yandex.ru">e.valentyuk@yandex.ru</a>
-  <a href="https://t.me/EugeneValentyuk">Telegram: @EugeneValentyuk</a>
-  <a href="https://evalentyuk.github.io/ai-analyst/">Сайт-резюме</a>
+<aside class="sidebar">
+
+  <h2>Контакты</h2>
+  <div class="contact-line"><span class="lbl">Тел.</span><span>+7 (902) 501-40-47</span></div>
+  <div class="contact-line"><span class="lbl">Email</span><a href="mailto:e.valentyuk@yandex.ru">e.valentyuk@yandex.ru</a></div>
+  <div class="contact-line"><span class="lbl">TG</span><a href="https://t.me/EugeneValentyuk">@EugeneValentyuk</a></div>
+  <div class="contact-line"><span class="lbl">Сайт</span><a href="https://evalentyuk.github.io/ai-analyst/">ai-analyst</a></div>
+  <p class="muted" style="margin-top:10px;">Екатеринбург (UTC+5), работаю по МСК</p>
+
+  <h2>Формат работы</h2>
+  <ul>
+    <li>Удалённо;</li>
+    <li>Полная занятость или парт-тайм от 80 ч/мес;</li>
+    <li>ИП на УСН 6% — договор оказания услуг;</li>
+    <li>Долгосрочно или по проекту.</li>
+  </ul>
+
+  <h2>AI-инструменты</h2>
+  <div class="tags">
+    <span class="tag" style="background:rgba(255,209,102,.18); color:var(--sidebar-accent);">Claude Code</span>
+    <span class="tag" style="background:rgba(255,209,102,.18); color:var(--sidebar-accent);">Claude API</span>
+    <span class="tag" style="background:rgba(255,209,102,.18); color:var(--sidebar-accent);">RAG + Llama</span>
+    <span class="tag" style="background:rgba(255,209,102,.18); color:var(--sidebar-accent);">Prompt-библиотека</span>
+  </div>
+
+  <h2>Образование</h2>
+  <p><strong>МИФИ</strong><br><span class="muted">Московский инженерно-физический институт</span></p>
+  <p class="muted">Факультет «А», кафедра «Электропривода и автоматизации».</p>
+
+  <h2>Курсы</h2>
+  <p><strong>Сертификат Zero Code</strong> — промпт-инжиниринг.<br><span class="muted">Университет Зерокодинга (zerocoder.ru), 2025.</span></p>
+
+  <h2>Языки</h2>
+  <ul>
+    <li>Русский — родной;</li>
+    <li>Английский — B1+ (технический; разговорный до B2 при практике).</li>
+  </ul>
+
+</aside>
+
+<main class="main">
+
+<div class="headline">
+  <h1>Евгений Валентюк</h1>
+  <p class="role">Senior System Analyst / Solution Architect</p>
+  <p class="tagline">Full-stack аналитик с архитектурным уклоном и AI-ориентированным подходом</p>
 </div>
-</header>
 
 <h2>О себе</h2>
 <p>20+ лет в ИТ, из них последние годы — в роли системного и бизнес-аналитика с архитектурным уклоном. Закрываю полный цикл — от сбора требований до приёмки. Веду 2–3 параллельных проекта на разных стадиях.</p>
@@ -151,8 +240,6 @@ strong { color: var(--fg); }
 </div>
 
 <h2>AI в работе аналитика и архитектора</h2>
-
-<h3>Что умею делать с AI</h3>
 <ul>
   <li><strong>Prompt engineering</strong> — формулирую задачи так, чтобы LLM давал точные и применимые результаты;</li>
   <li><strong>AI-assisted аналитика</strong> — сбор и формализация требований; BRD, FR, NFR, User Stories, ТЗ, ЧТЗ;</li>
@@ -164,61 +251,32 @@ strong { color: var(--fg); }
   <li><strong>Оркестрация AI-агентов</strong> — параллельный запуск и декомпозиция сложных задач.</li>
 </ul>
 
-<h3>Инструменты</h3>
-<div class="tags">
-  <span class="tag">Claude Code (CLI + VS Code)</span>
-  <span class="tag">Claude API</span>
-  <span class="tag">RAG + Llama</span>
-  <span class="tag">Prompt-библиотека</span>
+<h2>Типы проектов</h2>
+<div class="project-grid">
+  <div class="ptype">Биллинговые и расчётные системы (ЖКХ, энергетика)</div>
+  <div class="ptype">Микросервисная архитектура и миграции монолитов</div>
+  <div class="ptype">Финтех-платформы</div>
+  <div class="ptype">Медтех — разработка и реверс-инжиниринг</div>
+  <div class="ptype">Стартапы и продуктовые проекты с нуля</div>
+  <div class="ptype">Машинное обучение и компьютерное зрение</div>
+  <div class="ptype">Финансовые калькуляторы и расчётные инструменты</div>
+  <div class="ptype">Автоматизация документирования и Docs as Code</div>
 </div>
 
-<h3>Сертификация</h3>
-<p>Сертификат <strong>Zero Code</strong> — промпт-инжиниринг (Университет Зерокодинга, 2025).</p>
-
-<h2>Опыт в разрезе типов проектов</h2>
-<div class="project-types">
-  <h3>Биллинговые и расчётные системы (ЖКХ, энергетика)</h3>
-  <h3>Микросервисная архитектура и миграции монолитов</h3>
-  <h3>Финтех-платформы</h3>
-  <h3>Медтех — разработка и реверс-инжиниринг</h3>
-  <h3>Стартапы и продуктовые проекты с нуля</h3>
-</div>
-
-<h2>Опыт в разрезе типов задач</h2>
-<div class="project-types">
-  <h3>Системный анализ</h3>
-  <h3>Бизнес-анализ</h3>
-  <h3>Архитектура и проектирование</h3>
-  <h3>Руководство и наставничество</h3>
-  <h3>Заказная разработка и работа с заказчиками</h3>
-  <h3>Параллельное ведение проектов</h3>
+<h2>Типы задач</h2>
+<div class="task-grid">
+  <div class="ttype">Системный анализ</div>
+  <div class="ttype">Бизнес-анализ</div>
+  <div class="ttype">Архитектура и проектирование</div>
+  <div class="ttype">Руководство и наставничество</div>
+  <div class="ttype">Заказная разработка и работа с заказчиками</div>
+  <div class="ttype">Параллельное ведение проектов</div>
 </div>
 
 <h2>Стек и инструменты</h2>
 <p>Всем, что нужно аналитику и архитектору, владею на рабочем уровне.</p>
 
-<h2>Образование</h2>
-<p><strong>МИФИ</strong> (Московский инженерно-физический институт), факультет «А», кафедра «Электропривода и автоматизации».</p>
-
-<h2>Курсы и сертификации</h2>
-<ul>
-  <li><strong>Университет Зерокодинга</strong> (zerocoder.ru) — интенсив по промпт-инжинирингу, 2025.</li>
-</ul>
-
-<h2>Языки</h2>
-<ul>
-  <li>Русский — родной;</li>
-  <li>Английский — B1+ (технический: чтение и перевод без словаря; разговорный — до B2 при практике).</li>
-</ul>
-
-<h2>Формат сотрудничества</h2>
-<ul>
-  <li>Удалённо, готов работать по МСК (опыт с предыдущих проектов в Москве);</li>
-  <li>Полная занятость или парт-тайм (от 80 ч/мес);</li>
-  <li>ИП на УСН 6% — договор оказания услуг;</li>
-  <li>Готов к долгосрочному сотрудничеству и к проектному формату.</li>
-</ul>
-
+</main>
 </div>
 </body>
 </html>
