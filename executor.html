@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Евгений Валентюк — Senior System Analyst / Solution Architect</title>
+<style>
+:root {
+  --bg: #f4f5f7;
+  --paper: #ffffff;
+  --fg: #1f2330;
+  --muted: #5a6275;
+  --accent: #3a4a8f;
+  --accent-soft: #e8ecf8;
+  --accent-line: #c9d1ea;
+  --sidebar-bg: #2a3556;
+  --sidebar-fg: #e9ecf5;
+  --sidebar-muted: #aab3cc;
+  --sidebar-accent: #ffd166;
+  --border: #e1e4ec;
+  --tag-bg: #e8ecf8;
+  --tag-fg: #3a4a8f;
+  --warn-bg: #fff7e6;
+  --warn-border: #f0c270;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.55;
+  color: var(--fg);
+  background: var(--bg);
+  font-size: 14.5px;
+}
+.sheet {
+  max-width: 1100px;
+  margin: 24px auto;
+  background: var(--paper);
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  box-shadow: 0 4px 20px rgba(20, 30, 60, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.sidebar {
+  background: var(--sidebar-bg);
+  color: var(--sidebar-fg);
+  padding: 32px 26px;
+}
+.sidebar h2 {
+  color: var(--sidebar-accent);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  margin: 24px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 209, 102, 0.35);
+}
+.sidebar h2:first-child { margin-top: 0; }
+.sidebar p, .sidebar li { font-size: 13.5px; line-height: 1.55; }
+.sidebar ul { margin: 6px 0; padding-left: 16px; }
+.sidebar li { margin-bottom: 4px; color: var(--sidebar-fg); }
+.sidebar a { color: var(--sidebar-fg); text-decoration: none; border-bottom: 1px dotted var(--sidebar-muted); }
+.sidebar a:hover { color: var(--sidebar-accent); border-bottom-color: var(--sidebar-accent); }
+.sidebar .muted { color: var(--sidebar-muted); font-size: 12.5px; }
+.contact-line {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  margin: 4px 0;
+  font-size: 13.5px;
+}
+.contact-line .lbl {
+  color: var(--sidebar-muted);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  min-width: 54px;
+}
+.main {
+  padding: 36px 38px 40px;
+}
+.headline {
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 16px;
+  margin-bottom: 22px;
+}
+.headline h1 {
+  margin: 0 0 4px;
+  font-size: 28px;
+  letter-spacing: -0.3px;
+}
+.headline .role {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 0 4px;
+}
+.headline .tagline {
+  color: var(--muted);
+  margin: 0;
+  font-size: 14px;
+}
+.main h2 {
+  color: var(--accent);
+  font-size: 17px;
+  margin: 26px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--accent-line);
+  letter-spacing: 0.2px;
+}
+.main h3 {
+  font-size: 14px;
+  margin: 14px 0 6px;
+  color: var(--fg);
+  font-weight: 600;
+}
+.main p { margin: 0 0 10px; }
+.main ul { margin: 6px 0 12px; padding-left: 20px; }
+.main li { margin-bottom: 4px; }
+.main strong { color: var(--fg); }
+.callout {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  padding: 14px 18px;
+  margin: 14px 0 18px;
+  border-radius: 4px;
+  font-size: 14.5px;
+}
+.callout p { margin: 0 0 8px; }
+.callout p:last-child { margin-bottom: 0; }
+.warn {
+  background: var(--warn-bg);
+  border-left: 3px solid var(--warn-border);
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin: 10px 0 16px;
+}
+.warn p { margin: 0 0 6px; }
+.warn p:last-child { margin-bottom: 0; }
+.action-block {
+  margin: 8px 0 14px;
+  padding: 10px 14px;
+  background: #fafbfd;
+  border-left: 2px solid var(--accent-line);
+  border-radius: 3px;
+}
+.action-block strong { color: var(--accent); }
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 6px 0 14px;
+}
+.tag {
+  background: var(--tag-bg);
+  color: var(--tag-fg);
+  padding: 3px 10px;
+  font-size: 12px;
+  border-radius: 11px;
+  font-weight: 500;
+}
+.domain-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 10px 0 6px;
+}
+.domain-card {
+  background: #f7f8fc;
+  border-radius: 4px;
+  padding: 10px 14px;
+  border-left: 3px solid var(--accent);
+  font-size: 13.5px;
+}
+.domain-card b { color: var(--accent); display: block; margin-bottom: 4px; font-size: 13.5px; }
+@media print {
+  body { background: #fff; font-size: 11pt; }
+  .sheet { box-shadow: none; margin: 0; max-width: 100%; border-radius: 0; }
+  h2 { page-break-after: avoid; }
+}
+@media (max-width: 760px) {
+  .sheet { grid-template-columns: 1fr; }
+  .main { padding: 24px 22px; }
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<aside class="sidebar">
+
+  <h2>Контакты</h2>
+  <div class="contact-line"><span class="lbl">Тел.</span><span>+7 (902) 501-40-47</span></div>
+  <div class="contact-line"><span class="lbl">Email</span><a href="mailto:e.valentyuk@yandex.ru">e.valentyuk@yandex.ru</a></div>
+  <div class="contact-line"><span class="lbl">TG</span><a href="https://t.me/EugeneValentyuk">@EugeneValentyuk</a></div>
+  <p class="muted" style="margin-top:10px;">Екатеринбург (UTC+5), работаю по МСК (9:00–19:00)</p>
+
+  <h2>Как со мной работать</h2>
+  <ul>
+    <li>Удалённо;</li>
+    <li>Полная занятость или парт-тайм от 80 ч/мес;</li>
+    <li>ИП на УСН 6%, договор оказания услуг;</li>
+    <li>Time-and-material или fixed-price;</li>
+    <li>Короткий проект (1–3 мес) или долгосрочное сопровождение.</li>
+  </ul>
+
+  <h2>AI-инструменты</h2>
+  <div class="tags">
+    <span class="tag" style="background:rgba(255,209,102,.18); color:var(--sidebar-accent);">Claude Code</span>
+    <span class="tag" style="background:rgba(255,209,102,.18); color:var(--sidebar-accent);">Claude API</span>
+    <span class="tag" style="background:rgba(255,209,102,.18); color:var(--sidebar-accent);">RAG + Llama</span>
+    <span class="tag" style="background:rgba(255,209,102,.18); color:var(--sidebar-accent);">Prompt-библиотека</span>
+  </div>
+
+  <h2>Образование</h2>
+  <p><strong>МИФИ</strong><br><span class="muted">Московский инженерно-физический институт</span></p>
+  <p class="muted">Факультет «А», кафедра «Электропривода и автоматизации».</p>
+
+  <h2>Сертификация</h2>
+  <p><strong>Zero Code</strong> — промпт-инжиниринг.<br><span class="muted">Университет Зерокодинга (zerocoder.ru), 2025.</span></p>
+
+  <h2>Языки</h2>
+  <ul>
+    <li>Русский — родной;</li>
+    <li>Английский — B1+ (технический; разговорный до B2 при практике).</li>
+  </ul>
+
+</aside>
+
+<main class="main">
+
+<div class="headline">
+  <h1>Евгений Валентюк</h1>
+  <p class="role">Senior System Analyst / Solution Architect — c активным использованием AI</p>
+  <p class="tagline">Системный аналитик и архитектор с производственным опытом 20+ лет. Делаю работающие системы — от идеи до запуска.</p>
+</div>
+
+<h2>Кто я</h2>
+<p>Системный аналитик и архитектор с производственным опытом 20+ лет. Помогаю командам и заказчикам делать понятные, работающие системы — от первой идеи до запущенного продукта.</p>
+<div class="callout">
+<p><strong>AI — мой основной рабочий инструмент</strong>, а не модный аксессуар. Claude Code (CLI + VS Code) для аналитики, проектирования, документации и прототипирования. Коммерческий опыт с корпоративными LLM (RAG + Llama) на проекте федерального банка. Сертификат Zero Code по промпт-инжинирингу. На AI-проектах захожу с первого дня.</p>
+</div>
+<p>Работаю на результат. Если взялся за задачу — довожу до конца, не сваливаю на середине, не оставляю «потом доделаем».</p>
+
+<h2>AI в моей работе</h2>
+<p>Использую AI ежедневно — он реально ускоряет работу аналитика и архитектора в разы.</p>
+
+<h3>Что делаю с AI</h3>
+<ul>
+  <li>Формализация требований из устных пожеланий заказчика — BRD, FR, NFR, User Stories, ТЗ, ЧТЗ;</li>
+  <li>Проектирование архитектуры, моделей данных, API-контрактов;</li>
+  <li>Генерация диаграмм (BPMN, UML, C4, ERD) с автоматическим рендером в PNG/SVG;</li>
+  <li>Написание прототипного кода (Python/FastAPI, SQL, HTML/CSS/JS);</li>
+  <li>Ревью качества чужой документации и кода;</li>
+  <li>Оркестрация AI-агентов для параллельного выполнения подзадач.</li>
+</ul>
+
+<h3>Где особенно полезен</h3>
+<p>Проекты с интенсивным использованием AI, AI-assisted разработка, prompt engineering для бизнес-сценариев, проектирование AI-фич в продукте.</p>
+
+<h2>Что я сделаю на вашем проекте</h2>
+
+<div class="action-block">
+<p><strong>Восстановлю документацию там, где её нет.</strong> Реверс-инжиниринг кода, схем БД, поведения системы, интервью с разработчиками. Превращаю всё это в нормальные SRS, ТЗ, схемы интеграций. На медтех-проекте восстановил документацию по 30% недокументированной функциональности.</p>
+</div>
+
+<div class="action-block">
+<p><strong>Напишу новую документацию с нуля.</strong> BRD, FR, NFR, ТЗ, ЧТЗ, ADR. Доку пишу так, чтобы по ней реально могли работать разработка, тестирование и эксплуатация — а не «для галочки».</p>
+</div>
+
+<div class="action-block">
+<p><strong>Спроектирую API и интеграции.</strong> OpenAPI/Swagger-спецификации, схемы обмена, Kafka-топики, контракты сообщений, версионирование, обратная совместимость. REST, gRPC, SOAP, Webhook, OAuth 2.0, OIDC, mTLS.</p>
+</div>
+
+<div class="action-block">
+<p><strong>Разберу архитектуру.</strong> Что у вас работает, что мешает, где границы микросервисов, какие зависимости, где узкие места. Нарисую C4-модель, BPMN, Sequence-диаграммы, ERD — как инструмент обсуждения и принятия решений.</p>
+</div>
+
+<div class="action-block">
+<p><strong>Декомпозирую бизнес-задачу до постановок разработке.</strong> User Stories с acceptance criteria в формате Given-When-Then. Edge-кейсы и негативные сценарии прорабатываю заранее — чтобы QA не возвращал баги пачками после релиза.</p>
+</div>
+
+<div class="action-block">
+<p><strong>Спроектирую модель данных.</strong> ERD, нормализация, индексы, партиционирование, миграции. PostgreSQL, Oracle, MS SQL Server. SQL уверенный — CTE, оконные функции, EXPLAIN, оптимизация запросов.</p>
+</div>
+
+<div class="action-block">
+<p><strong>Соберу прототип.</strong> Если нужно быстро проверить гипотезу — Python/FastAPI на бэкенде, SQL для модели данных, прототип UI в Figma. Не претендую на роль разработчика, но рабочий MVP под обсуждение с бизнесом сделаю.</p>
+</div>
+
+<div class="action-block">
+<p><strong>Возьму коммуникацию между бизнесом, разработкой, QA, безопасниками.</strong> Переведу с языка на язык, согласую решения, зафиксирую договорённости письменно — чтобы потом не было «а мы думали наоборот».</p>
+</div>
+
+<div class="action-block">
+<p><strong>Доведу проект до приёмки.</strong> Acceptance criteria, тест-сценарии, протоколы приёмо-сдаточных испытаний, передача в поддержку.</p>
+</div>
+
+<h2>Где у меня глубокий доменный опыт</h2>
+<div class="domain-grid">
+  <div class="domain-card"><b>ЖКХ и энергетика</b>Биллинг, расчёты, перерасчёты, льготы, субсидии. Интеграции с ГИС ЖКХ, госуслугами, АБС банков-агентов. 354-ПП, 442-ПП, ЖК РФ. Миграции 300–400 тыс. лицевых счетов.</div>
+  <div class="domain-card"><b>Финтех</b>Платформенные микросервисы банка, Core-сервисы канала, реферальные программы. REST и Kafka. 152-ФЗ, 115-ФЗ, сценарии аутентификации.</div>
+  <div class="domain-card"><b>Ретейл</b>Миграция монолита Oracle в микросервисы PostgreSQL по strangler fig. Границы сервисов, схемы событий, JSON/YAML-контракты.</div>
+  <div class="domain-card"><b>Медтех</b>ПО для лучевой терапии: реконструкция данных датчиков, операции над планами лечения. Реверс-инжиниринг недокументированной функциональности.</div>
+  <div class="domain-card"><b>Стартапы с нуля</b>Полный цикл «от идеи до прототипа» — соло-аналитиком/архитектором, при поддержке AI-инструментов.</div>
+</div>
+
+<h2>Что я НЕ обещаю</h2>
+<div class="warn">
+<p>Чтобы сэкономить время обеим сторонам — называю зоны, где я не подойду:</p>
+<p><strong>ML / Data Science.</strong> Могу проектировать инфраструктуру под ML-проект, но не тренирую модели и не пишу production ML-код.</p>
+<p><strong>Узкие BPM-движки</strong> (ELMA365, Camunda, Appian, Bizagi) — концептуально понимаю BPMN, но опыт работы с конкретными платформами поверхностный.</p>
+<p><strong>Frontend-разработка.</strong> Читаю React/Vue, могу обсуждать архитектуру компонентов и состояние, но не пишу прод-код.</p>
+<p><strong>CRM-консалтинг по конкретным платформам</strong> (1С, Bitrix24, Salesforce) — на уровне общего понимания, не глубже.</p>
+<p><strong>Узкие отраслевые ниши</strong> (планограммы в ретейле, фискальные ФФД по 54-ФЗ, маркировка «Честный знак») — нужно учить с нуля.</p>
+</div>
+
+</main>
+</div>
+</body>
+</html>
