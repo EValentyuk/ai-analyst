@@ -213,6 +213,16 @@ body {
     <span class="tag" style="background:rgba(255,209,102,.18); color:var(--sidebar-accent);">Prompt-библиотека</span>
   </div>
 
+  <h2>ML / Data Science</h2>
+  <div class="tags">
+    <span class="tag" style="background:rgba(120,200,140,.18); color:#a9e3b8;">Python (pandas, numpy)</span>
+    <span class="tag" style="background:rgba(120,200,140,.18); color:#a9e3b8;">scikit-learn</span>
+    <span class="tag" style="background:rgba(120,200,140,.18); color:#a9e3b8;">LightGBM</span>
+    <span class="tag" style="background:rgba(120,200,140,.18); color:#a9e3b8;">rasterio / geopandas</span>
+    <span class="tag" style="background:rgba(120,200,140,.18); color:#a9e3b8;">Streamlit</span>
+    <span class="tag" style="background:rgba(120,200,140,.18); color:#a9e3b8;">CV / YOLO</span>
+  </div>
+
   <h2>Образование</h2>
   <p><strong>МИФИ</strong><br><span class="muted">Московский инженерно-физический институт</span></p>
   <p class="muted">Факультет «А», кафедра «Электропривода и автоматизации».</p>
@@ -290,6 +300,10 @@ body {
 </div>
 
 <div class="action-block">
+<p><strong>Соберу ML-пайплайн и доведу модель до результата.</strong> End-to-end: сбор и очистка данных, feature engineering, обучение и честная кросс-валидация (LightGBM, scikit-learn, baseline-модели), метрики качества, anomaly detection, деплой интерактивного UI на Streamlit. На проекте AgroNDVI собрал полный цикл спутникового мониторинга полей: Sentinel-2 → NDVI → прогноз урожайности с Leave-One-Out CV и детекцией аномалий тремя методами. Понимаю bias-variance trade-off: где простой baseline честнее тяжёлой модели — показываю это, а не подгоняю результат.</p>
+</div>
+
+<div class="action-block">
 <p><strong>Возьму коммуникацию между бизнесом, разработкой, QA, безопасниками.</strong> Переведу с языка на язык, согласую решения, зафиксирую договорённости письменно — чтобы потом не было «а мы думали наоборот».</p>
 </div>
 
@@ -304,12 +318,12 @@ body {
   <div class="domain-card"><b>Ретейл</b>Миграция монолита Oracle в микросервисы PostgreSQL по strangler fig. Границы сервисов, схемы событий, JSON/YAML-контракты.</div>
   <div class="domain-card"><b>Медтех</b>ПО для лучевой терапии: реконструкция данных датчиков, операции над планами лечения. Реверс-инжиниринг недокументированной функциональности.</div>
   <div class="domain-card"><b>Стартапы с нуля</b>Полный цикл «от идеи до прототипа» — соло-аналитиком/архитектором, при поддержке AI-инструментов.</div>
+  <div class="domain-card"><b>ML / геоаналитика</b>Спутниковый мониторинг (Sentinel-2, NDVI), прогноз урожайности на LightGBM + baseline, LOO-CV, anomaly detection. CV на YOLO. Стек: rasterio, geopandas, scikit-learn, Streamlit. Проекты AgroNDVI и MiniProctor.</div>
 </div>
 
 <h2>Что я НЕ обещаю</h2>
 <div class="warn">
 <p>Чтобы сэкономить время обеим сторонам — называю зоны, где я не подойду:</p>
-<p><strong>ML / Data Science.</strong> Могу проектировать инфраструктуру под ML-проект, но не тренирую модели и не пишу production ML-код.</p>
 <p><strong>Узкие BPM-движки</strong> (ELMA365, Camunda, Appian, Bizagi) — концептуально понимаю BPMN, но опыт работы с конкретными платформами поверхностный.</p>
 <p><strong>Frontend-разработка.</strong> Читаю React/Vue, могу обсуждать архитектуру компонентов и состояние, но не пишу прод-код.</p>
 <p><strong>CRM-консалтинг по конкретным платформам</strong> (1С, Bitrix24, Salesforce) — на уровне общего понимания, не глубже.</p>
