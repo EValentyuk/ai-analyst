@@ -218,9 +218,11 @@ body {
     <span class="tag" style="background:rgba(120,200,140,.18); color:#a9e3b8;">Python (pandas, numpy)</span>
     <span class="tag" style="background:rgba(120,200,140,.18); color:#a9e3b8;">scikit-learn</span>
     <span class="tag" style="background:rgba(120,200,140,.18); color:#a9e3b8;">LightGBM</span>
+    <span class="tag" style="background:rgba(120,200,140,.18); color:#a9e3b8;">PyTorch</span>
     <span class="tag" style="background:rgba(120,200,140,.18); color:#a9e3b8;">rasterio / geopandas</span>
+    <span class="tag" style="background:rgba(120,200,140,.18); color:#a9e3b8;">OpenCV / MediaPipe</span>
+    <span class="tag" style="background:rgba(120,200,140,.18); color:#a9e3b8;">YOLOv8 (fine-tune)</span>
     <span class="tag" style="background:rgba(120,200,140,.18); color:#a9e3b8;">Streamlit</span>
-    <span class="tag" style="background:rgba(120,200,140,.18); color:#a9e3b8;">CV / YOLO</span>
   </div>
 
   <h2>Образование</h2>
@@ -300,7 +302,7 @@ body {
 </div>
 
 <div class="action-block">
-<p><strong>Соберу ML-пайплайн и доведу модель до результата.</strong> End-to-end: сбор и очистка данных, feature engineering, обучение и честная кросс-валидация (LightGBM, scikit-learn, baseline-модели), метрики качества, anomaly detection, деплой интерактивного UI на Streamlit. На проекте AgroNDVI собрал полный цикл спутникового мониторинга полей: Sentinel-2 → NDVI → прогноз урожайности с Leave-One-Out CV и детекцией аномалий тремя методами. Понимаю bias-variance trade-off: где простой baseline честнее тяжёлой модели — показываю это, а не подгоняю результат.</p>
+<p><strong>Соберу ML-пайплайн и доведу модель до результата.</strong> End-to-end: сбор и очистка данных, feature engineering, обучение и честная кросс-валидация (LightGBM, scikit-learn, baseline-модели), метрики качества, anomaly detection, деплой интерактивного UI на Streamlit. На проекте AgroNDVI собрал полный цикл спутникового мониторинга полей: Sentinel-2 → NDVI → прогноз урожайности с Leave-One-Out CV и детекцией аномалий тремя методами. На проекте MiniProctor — компьютерное зрение: 5 детекторов нарушений на видео, fine-tune YOLOv8 под детекцию объектов (прирост F1 phone 0.59 → 0.73), MediaPipe для позы головы, разметка датасета и честная оценка precision/recall/F1 по версиям модели. Понимаю bias-variance trade-off: где простой baseline честнее тяжёлой модели — показываю это, а не подгоняю результат.</p>
 </div>
 
 <div class="action-block">
@@ -318,7 +320,8 @@ body {
   <div class="domain-card"><b>Ретейл</b>Миграция монолита Oracle в микросервисы PostgreSQL по strangler fig. Границы сервисов, схемы событий, JSON/YAML-контракты.</div>
   <div class="domain-card"><b>Медтех</b>ПО для лучевой терапии: реконструкция данных датчиков, операции над планами лечения. Реверс-инжиниринг недокументированной функциональности.</div>
   <div class="domain-card"><b>Стартапы с нуля</b>Полный цикл «от идеи до прототипа» — соло-аналитиком/архитектором, при поддержке AI-инструментов.</div>
-  <div class="domain-card"><b>ML / геоаналитика</b>Спутниковый мониторинг (Sentinel-2, NDVI), прогноз урожайности на LightGBM + baseline, LOO-CV, anomaly detection. CV на YOLO. Стек: rasterio, geopandas, scikit-learn, Streamlit. Проекты AgroNDVI и MiniProctor.</div>
+  <div class="domain-card"><b>ML / геоаналитика</b>AgroNDVI — спутниковый мониторинг полей (Sentinel-2, NDVI), прогноз урожайности на LightGBM + baseline, LOO-CV, anomaly detection. Стек: rasterio, geopandas, scikit-learn, Streamlit.</div>
+  <div class="domain-card"><b>Computer Vision</b>MiniProctor — система прокторинга на CV: 5 детекторов нарушений по видео, fine-tune YOLOv8, MediaPipe Face Landmarker, метрики precision/recall/F1, демо на Streamlit. Полный цикл: данные → разметка → обучение → метрики → UI.</div>
 </div>
 
 <h2>Что я НЕ обещаю</h2>
